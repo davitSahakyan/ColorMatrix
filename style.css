@@ -1,0 +1,21 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 10px;
+}
+.matrixRow {
+    display: flex;
+}
+.matrixElement {
+    min-width: 3rem;
+    min-height: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid white;
+    cursor: pointer;
+    color: transparent;
+}
