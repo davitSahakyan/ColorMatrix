@@ -2,12 +2,12 @@ const div = document.createElement("DIV");
 const rootElement = document.getElementById("root");
 let array = [];
 
-function mouseOver() {
+function mouseOver(matrixElementDiv) {
     matrixElementDiv.style.color = "white";
     console.log(matrixElementDiv.id);
 }
 
-function mouseOut() {
+function mouseOut(matrixElementDiv) {
     matrixElementDiv.style.color = "transparent";
 }
 
@@ -48,17 +48,13 @@ array.forEach((blueColor) => {
         matrixRow.classList.add("matrixRow");
         matrixElementDiv.classList.add("matrixElement");
         matrixElementDiv.id = randomId;
-        matrixElementDiv.addEventListener("mouseover", mouseOver);
-        matrixElementDiv.addEventListener("mouseout", mouseOut);
 
-        function mouseOver() {
-            matrixElementDiv.style.color = "white";
-            console.log(matrixElementDiv.id);
-        }
-
-        function mouseOut() {
-            matrixElementDiv.style.color = "transparent";
-        }
+        matrixElementDiv.addEventListener("mouseover", () =>
+            mouseOver(matrixElementDiv)
+        );
+        matrixElementDiv.addEventListener("mouseout", () =>
+            mouseOut(matrixElementDiv)
+        );
 
         matrixElementDiv.appendChild(rgbTextContainer);
         matrixElementDiv.appendChild(rgbContainerDiv);
