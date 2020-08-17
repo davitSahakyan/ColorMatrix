@@ -11,12 +11,12 @@ function mouseOut(matrixElementDiv) {
 }
 
 function buildMatrix() {
-    for (let blueColor = 0; blueColor <= 255; blueColor = blueColor + 10) {
+    for (let blueColor = 0; blueColor <= 255; blueColor = blueColor + 1) {
         const matrixRow = document.createElement("div");
         for (
             let greenColor = 0;
             greenColor <= 255;
-            greenColor = greenColor + 10
+            greenColor = greenColor + 1
         ) {
             const randomId =
                 Math.random().toString(36).substring(2, 15) +
