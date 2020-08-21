@@ -9,7 +9,7 @@ function mouseOut(matrixElementDiv) {
     matrixElementDiv.style.color = "transparent";
 }
 
-async function buildMatrix() {
+function buildMatrix() {
     for (let blueColor = 0; blueColor <= 255; blueColor++) {
         const matrixRow = document.createElement("div");
         for (let greenColor = 0; greenColor <= 255; greenColor++) {
